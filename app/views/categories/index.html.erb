@@ -1,0 +1,26 @@
+<div class="flex items-center gap-3 mb-2">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ed1b20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open w-8 h-8 text-primary">
+    <path d="M12 7v14"></path>
+    <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path>
+  </svg>
+  <h1 class="font-bold text-4xl">Rails Library</h1>
+</div>
+
+<p class="text-muted-foreground text-lg font-sans">
+  Browse and discover your next great read
+</p>
+
+<div class="relative mt-6 max-w-xl">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground">
+    <circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path>
+  </svg>
+  <input type="text" placeholder="Search by title, author, or keyword..." class="w-full pl-12 pr-4 py-3 rounded-lg bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition-all font-sans" value="">
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+  <% @categories.each do |category| %>
+    <p>
+      <%= category.name %>
+    </p>
+  <% end %>
+</div>
